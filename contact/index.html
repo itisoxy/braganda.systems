@@ -74,12 +74,13 @@
             <div class="section-label">Contact Form</div>
             <h3 style="font-size:24px;margin-top:8px;">Tell Us About Your Business</h3>
           </div>
+          <iframe name="hidden_iframe" style="display:none;"></iframe>
           <div id="form-success" style="display:none;padding:40px 24px;text-align:center;">
             <div style="font-size:32px;margin-bottom:16px;">✓</div>
             <h3 style="margin-bottom:12px;">Message received.</h3>
             <p style="color:var(--grey-text);font-size:15px;">We'll be in touch within one business day.</p>
           </div>
-          <form id="contact-form" method="POST" novalidate>
+          <form id="contact-form" method="POST" target="hidden_iframe" action="https://script.google.com/macros/s/AKfycbx11w00UYqo8xp23qR1UrM0ceU1d2WjqoZprT1fuKJfrFzmJkml_cgr9OxZx-HNGP4Lww/exec" novalidate>
             <div class="form-2col">
               <div class="form-row">
                 <label for="first-name">First Name</label>
@@ -124,22 +125,15 @@
   </main>
   <script src="/assets/main.js"></script>
   <script>
-    const SHEET_URL = 'https://script.google.com/macros/s/AKfycbx11w00UYqo8xp23qR1UrM0ceU1d2WjqoZprT1fuKJfrFzmJkml_cgr9OxZx-HNGP4Lww/exec';
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const btn = this.querySelector('[type="submit"]');
+    document.getElementById('contact-form').addEventListener('submit', function() {
+      var btn = this.querySelector('[type="submit"]');
       btn.textContent = 'Sending…';
       btn.disabled = true;
-      fetch(SHEET_URL, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(new FormData(this)) })
-        .then(function() {
-          document.getElementById('contact-form').style.display = 'none';
-          document.getElementById('form-success').style.display = 'block';
-        })
-        .catch(function() {
-          btn.textContent = 'Send Message →';
-          btn.disabled = false;
-          alert('Something went wrong — please email us directly at hello@braganda.systems');
-        });
+      var form = this;
+      setTimeout(function() {
+        form.style.display = 'none';
+        document.getElementById('form-success').style.display = 'block';
+      }, 1500);
     });
   </script>
 </body>
