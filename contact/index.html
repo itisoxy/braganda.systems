@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Book a Discovery Call | Braganda Systems</title>
+  <meta name="description" content="Book a discovery call with Braganda Systems. Tell us about your business and we'll show you exactly what AI automation can achieve. No hard sells, no lengthy proposals.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://braganda.systems/contact/">
+  <meta property="og:url" content="https://braganda.systems/contact/">
+  <meta property="og:title" content="Contact Braganda Systems — Book a Discovery Call">
+  <meta property="og:description" content="Book a no-obligation discovery call. We'll identify your biggest bottlenecks and show you exactly what's possible.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Braganda Systems",
+    "url": "https://braganda.systems/contact/",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Braganda Systems",
+      "email": "hello@braganda.systems",
+      "telephone": "+44-20-0000-0000",
+      "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" }
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <main id="main-content">
+  <header class="page-hero">
+    <div class="container">
+      <div class="section-label orange">Get in Touch</div>
+      <h1>Let's Build<br>Something<span class="text-orange">.</span></h1>
+      <p>Book a no-obligation discovery call. We'll understand your operation, identify the biggest opportunities, and tell you exactly what's possible.</p>
+    </div>
+  </header>
+
+  <section aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3 id="contact-heading">Start with a conversation.</h3>
+          <p>We don't do hard sells or lengthy proposal processes. A 30-minute call is usually enough to establish whether there's a fit — and if there is, we'll outline exactly what we'd build and what it would deliver.</p>
+          <div class="contact-detail">
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon" aria-hidden="true">✉</div>
+              <div>
+                <p><a href="mailto:hello@braganda.systems" style="color:inherit;text-decoration:none;">hello@braganda.systems</a></p>
+                <span>Email us anytime</span>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon" aria-hidden="true">📞</div>
+              <div>
+                <p><a href="tel:+442000000000" style="color:inherit;text-decoration:none;">+44 (0)20 0000 0000</a></p>
+                <span>Mon–Fri, 9am–6pm GMT</span>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon" aria-hidden="true">📍</div>
+              <div>
+                <p>London, United Kingdom</p>
+                <span>Remote-first, UK-based</span>
+              </div>
+            </div>
+          </div>
+          <p style="font-size:14px;color:var(--grey-text);">Prefer to go straight to a call? Use the form and select "Book a call" — we'll send you a calendar link within one business day.</p>
+        </div>
+
+        <div class="contact-form">
+          <div style="margin-bottom:32px;">
+            <div class="section-label">Contact Form</div>
+            <h3 style="font-size:24px;margin-top:8px;">Tell Us About Your Business</h3>
+          </div>
+          <!-- NOTE FOR CODEX: Replace with a backend form handler or service like Formspree/Netlify Forms -->
+          <!-- Add action="https://formspree.io/f/YOUR_ID" method="POST" to the form tag -->
+          <form method="POST" action="/contact/success/" novalidate>
+            <div class="form-2col">
+              <div class="form-row">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first_name" placeholder="James" required autocomplete="given-name">
+              </div>
+              <div class="form-row">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last_name" placeholder="Carter" required autocomplete="family-name">
+              </div>
+            </div>
+            <div class="form-row">
+              <label for="email">Business Email</label>
+              <input type="email" id="email" name="email" placeholder="james@yourbusiness.com" required autocomplete="email">
+            </div>
+            <div class="form-row">
+              <label for="company">Company Name</label>
+              <input type="text" id="company" name="company" placeholder="Your Business Ltd" autocomplete="organization">
+            </div>
+            <div class="form-row">
+              <label for="interest">What Are You Looking For?</label>
+              <select id="interest" name="interest">
+                <option value="discovery">Book a discovery call</option>
+                <option value="speed-to-lead">Speed to Lead Automation</option>
+                <option value="document-processing">Document Processing Automation</option>
+                <option value="follow-up-nurture">Follow-Up &amp; Nurture Sequences</option>
+                <option value="database-reactivation">Database Reactivation</option>
+                <option value="ai-os">AI-OS (Operating System)</option>
+                <option value="bespoke">Bespoke solution</option>
+                <option value="general">General enquiry</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="message">Tell Us About Your Current Challenge</label>
+              <textarea id="message" name="message" placeholder="What's slowing your business down? What would a successful outcome look like?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-orange" style="width:100%;justify-content:center;">Send Message →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+  <script src="/assets/main.js"></script>
+</body>
+</html>

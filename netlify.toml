@@ -1,0 +1,45 @@
+# ═══════════════════════════════════════════════════
+# Braganda Systems — Netlify Config
+# Drop this in root. Also works as a reference
+# for Apache (.htaccess) or Nginx equivalents.
+# ═══════════════════════════════════════════════════
+
+[build]
+  publish = "."
+
+# Force HTTPS
+[[redirects]]
+  from = "http://braganda.systems/*"
+  to   = "https://braganda.systems/:splat"
+  status = 301
+  force  = true
+
+# www → non-www
+[[redirects]]
+  from = "https://www.braganda.systems/*"
+  to   = "https://braganda.systems/:splat"
+  status = 301
+  force  = true
+
+# Custom 404
+[build.processing]
+  skip_processing = false
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options        = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy        = "strict-origin-when-cross-origin"
+
+# Cache static assets aggressively
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# HTML — short cache, always revalidate
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
