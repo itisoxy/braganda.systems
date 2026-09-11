@@ -1,6 +1,6 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false,
+  "trailingSlash": true,
   "headers": [
     {
       "source": "/assets/(.*)",
@@ -23,6 +23,31 @@
       "source": "/",
       "has": [{ "type": "host", "value": "www.braganda.systems" }],
       "destination": "https://braganda.systems/",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/insights/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/",
+      "destination": "/insights/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/losing-deals-first-5-minutes",
+      "destination": "/insights/losing-deals-first-5-minutes/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/losing-deals-first-5-minutes/",
+      "destination": "/insights/losing-deals-first-5-minutes/",
+      "permanent": true
+    },
+    {
+      "source": "/solutions",
+      "destination": "/solutions/",
       "permanent": true
     }
   ]
