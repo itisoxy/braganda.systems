@@ -147,10 +147,10 @@
           }
           return `<li><a href="${l.href}"${isActive(l.href) ? ' aria-current="page"' : ''}>${l.label}</a></li>`;
         }).join('')}
-        <li class="nav-cta-mobile"><a class="btn btn-orange" href="/contact/">Book an Audit →</a></li>
+        <li class="nav-cta-mobile"><a class="btn btn-orange" href="/contact/">Let's Build →</a></li>
       </ul>
       <div class="nav-cta">
-        <a class="btn btn-orange btn-sm" href="/contact/">Book an Audit →</a>
+        <a class="btn btn-orange btn-sm" href="/contact/">Let's Build →</a>
       </div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
@@ -216,7 +216,7 @@
 
       <div class="footer-bottom">
         <span>© 2025 Braganda Systems Ltd. All rights reserved.</span>
-        <a href="mailto:hello@braganda.com">hello@braganda.com</a>
+        <a href="mailto:hello@braganda.co.uk">hello@braganda.co.uk</a>
       </div>
     </div>
   </footer>`;

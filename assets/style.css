@@ -473,7 +473,7 @@ footer { background: var(--grey-light); color: var(--black); padding: 72px 0 40p
 .flow-diagram { display: flex; align-items: center; flex-wrap: wrap; gap: 0; border: 1px solid var(--grey-mid); background: var(--white); }
 .flow-step { flex: 1 1 0; min-width: 110px; padding: 22px 14px; text-align: center; font-size: 12px; font-weight: 700; letter-spacing: 0.02em; color: var(--black); border-right: 1px solid var(--grey-mid); position: relative; }
 .flow-step:last-child { border-right: none; color: var(--orange); }
-.flow-step-sub { display: block; margin-top: 5px; font-size: 10px; font-weight: 500; letter-spacing: 0; text-transform: none; color: var(--grey-label); }
+.flow-step-sub { display: block; margin-top: 8px; font-size: 10px; font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--grey-label); }
 .flow-arrow { flex: 0 0 auto; color: var(--grey-label); font-size: 14px; padding: 0 2px; }
 .flow-diagram.dark { background: var(--black); border-color: rgba(255,255,255,0.12); }
 .flow-diagram.dark .flow-step { color: rgba(255,255,255,0.85); border-right-color: rgba(255,255,255,0.12); }
@@ -679,6 +679,7 @@ footer { background: var(--grey-light); color: var(--black); padding: 72px 0 40p
   .flagship-grid { grid-template-columns: 1fr; }
   .flow-diagram { flex-direction: column; }
   .flow-step { border-right: none; border-bottom: 1px solid var(--grey-mid); width: 100%; }
+  .flow-step-sub { margin-top: 6px; font-size: 11px; }
   .flow-diagram.dark .flow-step { border-bottom-color: rgba(255,255,255,0.12); }
   .flow-arrow { transform: rotate(90deg); padding: 4px 0; }
   .diff-banner { padding: 32px 24px; }
