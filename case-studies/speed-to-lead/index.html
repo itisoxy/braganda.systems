@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Speed-to-Lead Automation — Case Study — Braganda Systems</title>
+  <meta name="description" content="How Braganda built an AI-powered Speed-to-Lead system that captures, qualifies, routes and responds to inbound leads automatically — n8n, OpenAI and Zoho CRM.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://braganda.systems/case-studies/speed-to-lead/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://braganda.systems/case-studies/speed-to-lead/">
+  <meta property="og:title" content="AI Speed-to-Lead Automation — Case Study — Braganda Systems">
+  <meta property="og:description" content="From inbound enquiry to qualified, routed and followed-up lead — automatically. Built with n8n, OpenAI and Zoho CRM.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Case Studies", "item": "https://braganda.systems/case-studies/" },
+      { "@type": "ListItem", "position": 2, "name": "Speed-to-Lead", "item": "https://braganda.systems/case-studies/speed-to-lead/" }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/assets/style.css?v=9">
+</head>
+<body>
+  <main id="main-content">
+  <header class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom:20px;">
+        <a href="/case-studies/">Case Studies</a><span class="sep">→</span><a href="/case-studies/speed-to-lead/" aria-current="page">Speed-to-Lead</a>
+      </nav>
+      <div class="section-label orange">Case Study · Speed-to-Lead</div>
+      <h1>AI Speed-to-Lead<br>Automation<span class="text-orange">.</span></h1>
+      <p>From inbound enquiry to qualified, routed and followed-up lead — automatically.</p>
+      <p style="font-size:13px;color:var(--grey-text);margin-top:20px;letter-spacing:0.02em;">Braganda Systems · GTM Automation · AI Lead Scoring · CRM Integration</p>
+    </div>
+  </header>
+
+  <section class="sol-content" aria-labelledby="challenge-heading">
+    <div class="container">
+      <div class="sol-2col">
+        <div>
+          <div class="section-label">The Challenge</div>
+          <h2 id="challenge-heading">Speed Matters.<br>Manual Doesn't<span class="text-orange">.</span></h2>
+        </div>
+        <div>
+          <p style="font-size:16px;color:var(--grey-text);line-height:1.7;">When a new enquiry comes in, speed matters. But the typical process still involves someone manually reviewing the lead, deciding how valuable it is, entering it into the CRM and sending a response.</p>
+          <p style="font-size:16px;color:var(--grey-text);line-height:1.7;margin-top:16px;">For Braganda, I wanted to remove that operational gap and build a system that could <strong style="color:var(--black);">capture, qualify, route and respond to leads automatically</strong> — while keeping human involvement where it matters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--grey-light);" aria-labelledby="stack-heading">
+    <div class="container">
+      <div class="section-label" style="margin-bottom:24px;">The Stack</div>
+      <h2 id="stack-heading" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Technology Stack</h2>
+      <div class="stack-grid">
+        <div class="stack-card">
+          <img class="stack-logo" src="/assets/logos/n8n.svg" alt="n8n logo">
+          <div><h4>n8n</h4><p>Workflow orchestration</p></div>
+        </div>
+        <div class="stack-card">
+          <img class="stack-logo" src="/assets/logos/openai.svg" alt="OpenAI logo">
+          <div><h4>OpenAI</h4><p>AI qualification &amp; lead scoring</p></div>
+        </div>
+        <div class="stack-card">
+          <img class="stack-logo" src="/assets/logos/zoho.svg" alt="Zoho logo">
+          <div><h4>Zoho CRM</h4><p>Lead and deal management</p></div>
+        </div>
+        <div class="stack-card">
+          <img class="stack-logo" src="/assets/logos/googlesheets.svg" alt="Google Sheets logo">
+          <div><h4>Google Sheets</h4><p>Logging &amp; monitoring</p></div>
+        </div>
+        <div class="stack-card">
+          <div class="contact-detail-icon" aria-hidden="true">✉</div>
+          <div><h4>Email / SMTP</h4><p>Automated lead response</p></div>
+        </div>
+        <div class="stack-card">
+          <div class="contact-detail-icon" aria-hidden="true">⇄</div>
+          <div><h4>Webhooks + REST APIs</h4><p>System connectivity</p></div>
+        </div>
+      </div>
+      <p class="tech-disclaimer">All product names and logos are property of their respective owners. Their use does not imply endorsement or partnership.</p>
+    </div>
+  </section>
+
+  <section class="process" aria-labelledby="solution-heading">
+    <div class="container">
+      <div class="section-label">The Solution</div>
+      <h2 id="solution-heading">Six Steps.<br>Fully Automated<span class="text-orange">.</span></h2>
+      <p style="font-size:15px;color:var(--white);max-width:640px;margin-top:20px;margin-bottom:48px;line-height:1.7;">An AI-powered Speed-to-Lead system that takes a new Braganda enquiry through the complete first stage of the sales process.</p>
+      <div class="process-grid process-grid-3">
+        <div class="process-step"><div class="step-num">01</div><div class="step-label">Capture</div><h4>Capture</h4><p>A new website enquiry triggers the workflow instantly through a webhook.</p></div>
+        <div class="process-step"><div class="step-num">02</div><div class="step-label">Qualify</div><h4>Qualify</h4><p>OpenAI analyses the enquiry against defined commercial criteria and returns a lead score, priority classification and reasoning.</p></div>
+        <div class="process-step"><div class="step-num">03</div><div class="step-label">Route</div><h4>Route</h4><p>n8n applies business rules to the score. High-priority leads go straight to the sales route; others follow the standard sequence. AI provides the intelligence — workflow logic decides what happens next.</p></div>
+        <div class="process-step"><div class="step-num">04</div><div class="step-label">Update CRM</div><h4>Update CRM</h4><p>The lead is automatically created in Zoho CRM, with contact, enquiry and qualification data mapped into the record.</p></div>
+        <div class="process-step"><div class="step-num">05</div><div class="step-label">Respond</div><h4>Respond</h4><p>The appropriate email response is automatically triggered, reducing the time between enquiry and first contact.</p></div>
+        <div class="process-step"><div class="step-num">06</div><div class="step-label">Track</div><h4>Track</h4><p>The lead, score and workflow outcome are logged in Google Sheets, creating visibility into how the automation is performing.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="workflow-heading">
+    <div class="container">
+      <div class="section-label">See the Workflow in Action</div>
+      <h2 id="workflow-heading">One Enquiry. One<br>Automated Journey<span class="text-orange">.</span></h2>
+      <div class="flow-diagram" style="margin-top:40px;" aria-label="Speed-to-lead workflow">
+        <div class="flow-step">Form Submitted</div><div class="flow-arrow" aria-hidden="true">→</div>
+        <div class="flow-step">AI Qualification</div><div class="flow-arrow" aria-hidden="true">→</div>
+        <div class="flow-step">Lead Scored</div><div class="flow-arrow" aria-hidden="true">→</div>
+        <div class="flow-step">Route Selected</div><div class="flow-arrow" aria-hidden="true">→</div>
+        <div class="flow-step">Zoho Updated</div><div class="flow-arrow" aria-hidden="true">→</div>
+        <div class="flow-step">Email Sent</div><div class="flow-arrow" aria-hidden="true">→</div>
+        <div class="flow-step">Activity Logged</div>
+      </div>
+      <div style="margin-top:24px;border:1px solid var(--grey-mid);background:var(--grey-light);height:280px;display:flex;align-items:center;justify-content:center;text-align:center;">
+        <div>
+          <div style="font-size:32px;margin-bottom:12px;">▶</div>
+          <p style="font-size:13px;color:var(--grey-text);">Workflow demo — video coming soon</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--grey-light);" aria-labelledby="result-heading">
+    <div class="container">
+      <div class="section-label">The Result</div>
+      <h2 id="result-heading">From Manual to<br>Automated GTM<span class="text-orange">.</span></h2>
+      <div class="sol-2col" style="margin-top:48px;align-items:center;">
+        <div>
+          <p style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey-label);margin-bottom:14px;">From a manual process...</p>
+          <p style="font-size:14px;color:var(--grey-text);line-height:1.8;">Enquiry → Review → Qualify → CRM Entry → Respond → Log</p>
+          <p style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey-label);margin-top:28px;margin-bottom:14px;">...to an automated GTM workflow.</p>
+          <div class="flow-diagram">
+            <div class="flow-step">Enquiry</div><div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-step">AI + Automation</div><div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-step">Sales-Ready Lead</div>
+          </div>
+          <p style="font-size:15px;color:var(--grey-text);line-height:1.7;margin-top:24px;">The system now handles the repetitive operational work automatically, allowing human attention to focus on <strong style="color:var(--black);">qualified conversations and closing opportunities</strong>.</p>
+        </div>
+        <ul class="benefits-list">
+          <li class="benefit-item"><div class="why-dot"></div><p>Faster lead response</p></li>
+          <li class="benefit-item"><div class="why-dot"></div><p>Automated qualification</p></li>
+          <li class="benefit-item"><div class="why-dot"></div><p>Consistent lead routing</p></li>
+          <li class="benefit-item"><div class="why-dot"></div><p>Reduced CRM admin</p></li>
+          <li class="benefit-item"><div class="why-dot"></div><p>Complete processing log</p></li>
+          <li class="benefit-item"><div class="why-dot"></div><p>Scalable across multiple lead sources</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="scale-heading">
+    <div class="container">
+      <div class="section-label">Built to Scale Beyond Braganda</div>
+      <h2 id="scale-heading">Not Tied to One<br>Website or CRM<span class="text-orange">.</span></h2>
+      <p style="font-size:16px;color:var(--grey-text);line-height:1.7;max-width:680px;margin-top:20px;margin-bottom:44px;">The same model can connect different combinations of CRM, automation, AI and lead source — with qualification criteria, routing rules and follow-up logic adapted around each company's existing sales process.</p>
+      <div class="bottleneck-grid">
+        <div class="bottleneck-card">
+          <h4>CRM</h4>
+          <ul>
+            <li>Zoho</li>
+            <li>HubSpot</li>
+            <li>Salesforce</li>
+          </ul>
+        </div>
+        <div class="bottleneck-card">
+          <h4>Automation</h4>
+          <ul>
+            <li>n8n</li>
+            <li>Make</li>
+            <li>Zapier</li>
+          </ul>
+        </div>
+        <div class="bottleneck-card">
+          <h4>AI</h4>
+          <ul>
+            <li>OpenAI</li>
+            <li>Claude</li>
+            <li>Gemini</li>
+          </ul>
+        </div>
+        <div class="bottleneck-card">
+          <h4>Lead Sources</h4>
+          <ul>
+            <li>Website</li>
+            <li>Paid Ads</li>
+            <li>LinkedIn</li>
+            <li>Forms · APIs</li>
+          </ul>
+        </div>
+        <div class="bottleneck-card">
+          <h4>Actions</h4>
+          <ul>
+            <li>Email</li>
+            <li>Slack</li>
+            <li>CRM Tasks</li>
+            <li>Sales Alerts · Meeting Booking</li>
+          </ul>
+        </div>
+        <div class="bottleneck-card">
+          <h4>Data &amp; Reporting</h4>
+          <ul>
+            <li>Google Sheets</li>
+            <li>Supabase</li>
+            <li>PostgreSQL</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--grey-light);" aria-labelledby="architecture-heading">
+    <div class="container">
+      <div class="section-label">The Architecture</div>
+      <h2 id="architecture-heading" style="margin-bottom:40px;">The Connected<br>System<span class="text-orange">.</span></h2>
+      <div class="flow-diagram dark" aria-label="Speed-to-lead architecture">
+        <div class="flow-step">Lead Signal</div><div class="flow-arrow" aria-hidden="true">→</div>
+        <div class="flow-step">AI Qualification</div><div class="flow-arrow" aria-hidden="true">→</div>
+        <div class="flow-step">Business Logic</div><div class="flow-arrow" aria-hidden="true">→</div>
+        <div class="flow-step">CRM</div><div class="flow-arrow" aria-hidden="true">→</div>
+        <div class="flow-step">Sales Action</div><div class="flow-arrow" aria-hidden="true">→</div>
+        <div class="flow-step">Reporting</div>
+      </div>
+      <p style="font-size:16px;color:var(--grey-text);line-height:1.7;max-width:680px;margin-top:32px;">The result is a connected GTM system that turns inbound interest into <strong style="color:var(--black);">structured, actionable sales opportunities — automatically.</strong></p>
+    </div>
+  </section>
+
+  <div class="bespoke">
+    <div class="container">
+      <div class="bespoke-inner">
+        <div><h2>Want to see what this could look like in your GTM stack?</h2></div>
+        <a class="btn-white" href="/solutions/speed-to-lead/">See How It Works →</a>
+      </div>
+    </div>
+  </div>
+  </main>
+  <script src="/assets/main.js"></script>
+</body>
+</html>

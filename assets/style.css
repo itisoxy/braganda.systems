@@ -622,8 +622,17 @@ footer { background: var(--grey-light); color: var(--black); padding: 72px 0 40p
 .framework-callout { border-top: 1px solid var(--grey-mid); border-bottom: 1px solid var(--grey-mid); padding: 28px 0; margin: 40px 0; max-width: 680px; }
 .framework-callout .fc-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey-label); margin-bottom: 14px; }
 
+/* ─── CASE STUDY: TECH STACK GRID ─────────────── */
+.stack-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--grey-mid); border: 1px solid var(--grey-mid); }
+.stack-card { background: var(--white); padding: 32px 28px; display: flex; flex-direction: column; gap: 16px; transition: background 0.2s; }
+.stack-card:hover { background: var(--grey-light); }
+.stack-logo { height: 26px; width: auto; max-width: 130px; }
+.stack-card h4 { font-size: 15px; }
+.stack-card p { font-size: 13px; color: var(--grey-text); line-height: 1.6; }
+
 /* ─── RESPONSIVE ──────────────────────────────── */
 .process-grid-5 { grid-template-columns: repeat(5, 1fr); }
+.process-grid-3 { grid-template-columns: repeat(3, 1fr); }
 /* ─── NAV RESPONSIVE (own breakpoint — wider than the general layout
    breakpoint below, so the horizontal nav never gets squeezed) ──── */
 @media (max-width: 1080px) {
@@ -659,7 +668,8 @@ footer { background: var(--grey-light); color: var(--black); padding: 72px 0 40p
   .hero { padding-top: 100px; padding-bottom: 60px; min-height: auto; }
   .hero-diagram-card { padding: 20px; }
   .pain-grid { grid-template-columns: 1fr 1fr; }
-  .process-grid, .process-grid-5 { grid-template-columns: 1fr 1fr; }
+  .process-grid, .process-grid-5, .process-grid-3 { grid-template-columns: 1fr 1fr; }
+  .stack-grid { grid-template-columns: 1fr 1fr; }
   .results-grid { grid-template-columns: 1fr 1fr; }
   .services-grid { grid-template-columns: 1fr; }
   .blog-grid { grid-template-columns: 1fr; }
@@ -698,8 +708,8 @@ footer { background: var(--grey-light); color: var(--black); padding: 72px 0 40p
   .footer-insights-directory { grid-template-columns: 1fr 1fr; gap: 28px 20px; }
 }
 @media (max-width: 540px) {
-  .pain-grid, .process-grid, .process-grid-5, .results-grid, .who-grid,
-  .use-cases-grid, .about-values-grid, .bottleneck-grid,
+  .pain-grid, .process-grid, .process-grid-5, .process-grid-3, .results-grid, .who-grid,
+  .use-cases-grid, .about-values-grid, .bottleneck-grid, .stack-grid,
   .footer-insights-directory { grid-template-columns: 1fr; }
   .final-cta-btns, .hero-btns, .aios-hero-btns, .aios-callout-btns { flex-direction: column; align-items: center; }
   .form-2col { grid-template-columns: 1fr; }
