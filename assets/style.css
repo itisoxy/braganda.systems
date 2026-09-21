@@ -634,8 +634,8 @@ footer { background: var(--grey-light); color: var(--black); padding: 72px 0 40p
 .stack-strip { display: flex; flex-wrap: wrap; border: 1px solid var(--grey-mid); background: var(--white); }
 .stack-strip-item { display: flex; align-items: center; gap: 10px; padding: 18px 24px; border-right: 1px solid var(--grey-mid); border-bottom: 1px solid var(--grey-mid); flex: 1 1 auto; white-space: nowrap; }
 .stack-strip-item:last-child { border-right: none; }
-.stack-strip-logo { height: 15px; width: auto; max-width: 70px; flex-shrink: 0; }
-.stack-strip-icon { font-size: 13px; width: 15px; text-align: center; flex-shrink: 0; color: var(--grey-text); }
+.stack-strip-logo { height: 18px; width: 18px; object-fit: contain; flex-shrink: 0; }
+.stack-strip-icon { font-size: 13px; width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--grey-text); }
 .stack-strip-item span { font-size: 12px; font-weight: 600; color: var(--black); }
 
 /* ─── RESPONSIVE ──────────────────────────────── */
