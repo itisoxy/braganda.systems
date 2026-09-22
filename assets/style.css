@@ -642,6 +642,41 @@ footer { background: var(--grey-light); color: var(--black); padding: 72px 0 40p
 .stack-strip-item:hover .stack-strip-icon, .stack-strip-item:focus-within .stack-strip-icon { transform: scale(1.12); }
 .stack-strip-item span:not(.tech-tip) { font-size: 12px; font-weight: 600; color: var(--black); }
 
+/* ─── RESULTS GRID: 4-COLUMN VARIANT (system performance cards) ─── */
+.results-grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+/* ─── BOTTLENECK GRID: 5-COLUMN VARIANT (config examples) ───────── */
+.bottleneck-grid-5 { grid-template-columns: repeat(5, 1fr); }
+
+/* ─── CONFIGURATION LAYER DIAGRAM ─────────────────────────────── */
+.config-diagram { border: 1px solid var(--grey-mid); background: var(--white); padding: 40px 36px; }
+.config-layer-label { display: flex; align-items: center; gap: 10px; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 16px; }
+.config-layer-label .config-swatch { width: 13px; height: 13px; border: 1.5px solid var(--orange); flex-shrink: 0; }
+.config-layer-label-core { color: var(--black); }
+.config-layer-label-config { color: var(--grey-label); margin-top: 32px; }
+.config-layer-label-config .config-swatch { border-style: dashed; border-color: var(--grey-label); }
+.config-connector { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 0; font-size: 11px; font-weight: 600; letter-spacing: 0.04em; color: var(--grey-label); }
+.flow-diagram-dashed { border-style: dashed; }
+.flow-diagram-dashed .flow-step { border-right-style: dashed; }
+
+/* ─── PROOF STRIP (small inline stat line) ────────────────────── */
+.proof-strip { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-top: -20px; margin-bottom: 44px; }
+.proof-strip .proof-dot { width: 4px; height: 4px; background: var(--orange); flex-shrink: 0; }
+
+/* ─── VIDEO EMBED (poster, click-to-load) ─────────────────────── */
+.video-embed { position: relative; margin-top: 24px; border: 1px solid var(--grey-mid); background: var(--white); aspect-ratio: 16 / 9; max-height: 460px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; cursor: pointer; }
+.video-embed-poster { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.video-embed-play { width: 60px; height: 60px; border: 1.5px solid var(--black); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; transition: background 0.2s, color 0.2s, border-color 0.2s; }
+.video-embed:hover .video-embed-play { background: var(--orange); border-color: var(--orange); color: var(--white); }
+.video-embed-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey-text); }
+.video-embed iframe { width: 100%; height: 100%; border: none; }
+
+/* ─── BENCHMARK ROW (subtle, secondary to system performance) ─── */
+.benchmark-row { border-top: 1px solid var(--grey-mid); margin-top: 44px; padding-top: 28px; }
+.benchmark-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.benchmark-label { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--grey-label); margin-bottom: 6px; }
+.benchmark-value { font-size: 13px; font-style: italic; color: var(--grey-label); }
+
 /* ─── RESPONSIVE ──────────────────────────────── */
 .process-grid-5 { grid-template-columns: repeat(5, 1fr); }
 .process-grid-3 { grid-template-columns: repeat(3, 1fr); }
@@ -682,7 +717,10 @@ footer { background: var(--grey-light); color: var(--black); padding: 72px 0 40p
   .pain-grid { grid-template-columns: 1fr 1fr; }
   .process-grid, .process-grid-5, .process-grid-3 { grid-template-columns: 1fr 1fr; }
   .stack-grid { grid-template-columns: 1fr 1fr; }
-  .results-grid { grid-template-columns: 1fr 1fr; }
+  .results-grid, .results-grid-4 { grid-template-columns: 1fr 1fr; }
+  .bottleneck-grid-5 { grid-template-columns: 1fr 1fr; }
+  .benchmark-grid { grid-template-columns: 1fr 1fr; }
+  .flow-diagram-dashed .flow-step { border-bottom-style: dashed; }
   .services-grid { grid-template-columns: 1fr; }
   .blog-grid { grid-template-columns: 1fr; }
   .use-cases-grid { grid-template-columns: 1fr 1fr; }
@@ -720,9 +758,10 @@ footer { background: var(--grey-light); color: var(--black); padding: 72px 0 40p
   .footer-insights-directory { grid-template-columns: 1fr 1fr; gap: 28px 20px; }
 }
 @media (max-width: 540px) {
-  .pain-grid, .process-grid, .process-grid-5, .process-grid-3, .results-grid, .who-grid,
-  .use-cases-grid, .about-values-grid, .bottleneck-grid, .stack-grid,
-  .footer-insights-directory { grid-template-columns: 1fr; }
+  .pain-grid, .process-grid, .process-grid-5, .process-grid-3, .results-grid, .results-grid-4, .who-grid,
+  .use-cases-grid, .about-values-grid, .bottleneck-grid, .bottleneck-grid-5, .stack-grid,
+  .benchmark-grid, .footer-insights-directory { grid-template-columns: 1fr; }
+  .config-diagram { padding: 28px 22px; }
   .final-cta-btns, .hero-btns, .aios-hero-btns, .aios-callout-btns { flex-direction: column; align-items: center; }
   .form-2col { grid-template-columns: 1fr; }
   .tech-badge .tech-tip { width: 180px; }

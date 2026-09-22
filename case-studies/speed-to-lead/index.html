@@ -21,7 +21,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="/assets/style.css?v=11">
+  <link rel="stylesheet" href="/assets/style.css?v=12">
 </head>
 <body>
   <main id="main-content">
@@ -30,6 +30,7 @@
       <nav class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom:20px;">
         <a href="/case-studies/">Case Studies</a><span class="sep">→</span><a href="/case-studies/speed-to-lead/" aria-current="page">Speed-to-Lead</a>
       </nav>
+      <div style="font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-label);margin-bottom:8px;">Flagship Build 01</div>
       <div class="section-label orange">Case Study · Speed-to-Lead</div>
       <h1>AI Speed-to-Lead<br>Automation<span class="text-orange">.</span></h1>
       <p>From inbound enquiry to qualified, routed and followed-up lead — automatically.</p>
@@ -73,19 +74,118 @@
     <div class="container">
       <div class="section-label">The Solution</div>
       <h2 id="solution-heading">Six Steps.<br>Fully Automated<span class="text-orange">.</span></h2>
-      <p style="font-size:15px;color:var(--white);max-width:640px;margin-top:20px;margin-bottom:48px;line-height:1.7;">An AI-powered Speed-to-Lead system that takes a new Braganda enquiry through the complete first stage of the sales process.</p>
+      <p style="font-size:15px;color:var(--white);max-width:640px;margin-top:20px;margin-bottom:20px;line-height:1.7;">An AI-powered Speed-to-Lead system that takes a new Braganda enquiry through the complete first stage of the sales process.</p>
+      <div class="proof-strip">
+        <span>6 Automated Stages</span><span class="proof-dot" aria-hidden="true"></span>
+        <span>3 Routing Paths</span><span class="proof-dot" aria-hidden="true"></span>
+        <span>1 Connected GTM System</span>
+      </div>
       <div class="process-grid process-grid-3">
         <div class="process-step"><div class="step-num">01</div><div class="step-label">Capture</div><h4>Capture</h4><p>A new website enquiry triggers the workflow instantly through a webhook.</p></div>
         <div class="process-step"><div class="step-num">02</div><div class="step-label">Qualify</div><h4>Qualify</h4><p>OpenAI analyses the enquiry against defined commercial criteria and returns a lead score, priority classification and reasoning.</p></div>
-        <div class="process-step"><div class="step-num">03</div><div class="step-label">Route</div><h4>Route</h4><p>n8n applies business rules to the score. High-priority leads go straight to the sales route; others follow the standard sequence. AI provides the intelligence — workflow logic decides what happens next.</p></div>
-        <div class="process-step"><div class="step-num">04</div><div class="step-label">Update CRM</div><h4>Update CRM</h4><p>The lead is automatically created in Zoho CRM, with contact, enquiry and qualification data mapped into the record.</p></div>
+        <div class="process-step"><div class="step-num">03</div><div class="step-label">Route</div><h4>Route</h4><p>n8n applies business rules to the score and qualification output. High-priority leads follow the sales route while other leads can follow nurture or human-review routes.</p></div>
+        <div class="process-step"><div class="step-num">04</div><div class="step-label">Update CRM</div><h4>Update CRM</h4><p>The lead is automatically created or updated in Zoho CRM with contact, enquiry and qualification data mapped into the record.</p></div>
         <div class="process-step"><div class="step-num">05</div><div class="step-label">Respond</div><h4>Respond</h4><p>The appropriate email response is automatically triggered, reducing the time between enquiry and first contact.</p></div>
-        <div class="process-step"><div class="step-num">06</div><div class="step-label">Track</div><h4>Track</h4><p>The lead, score and workflow outcome are logged in Google Sheets, creating visibility into how the automation is performing.</p></div>
+        <div class="process-step"><div class="step-num">06</div><div class="step-label">Track</div><h4>Track</h4><p>The lead, score, route and workflow outcome are logged for operational visibility.</p></div>
       </div>
     </div>
   </section>
 
-  <section aria-labelledby="workflow-heading">
+  <section aria-labelledby="config-heading">
+    <div class="container">
+      <div class="section-label">Configuration Layer</div>
+      <h2 id="config-heading">One Engine.<br>Your Business Rules<span class="text-orange">.</span></h2>
+      <p style="font-size:16px;color:var(--grey-text);line-height:1.7;max-width:680px;margin-top:20px;margin-bottom:40px;">The workflow architecture stays consistent while the qualification, routing and response logic adapts to each company's GTM strategy.</p>
+
+      <div class="config-diagram">
+        <div class="config-layer-label config-layer-label-core"><span class="config-swatch" aria-hidden="true"></span>Core Workflow</div>
+        <div class="flow-diagram" aria-label="Core workflow layer">
+          <div class="flow-step">Capture</div><div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-step">Qualify</div><div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-step">Route</div><div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-step">CRM</div><div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-step">Respond</div><div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-step">Track</div>
+        </div>
+
+        <div class="config-connector" aria-hidden="true">↓ configured by ↓</div>
+
+        <div class="config-layer-label config-layer-label-config"><span class="config-swatch" aria-hidden="true"></span>Client Configuration</div>
+        <div class="flow-diagram flow-diagram-dashed" aria-label="Client configuration layer">
+          <div class="flow-step">ICP</div><div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-step">Scoring</div><div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-step">Routing Rules</div><div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-step">Response Templates</div><div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-step">SLA</div><div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-step">Business Rules</div>
+        </div>
+      </div>
+      <p style="font-size:14px;color:var(--grey-text);line-height:1.7;margin-top:20px;max-width:680px;">The automation stays the same — the business rules adapt to each company's GTM strategy.</p>
+
+      <div style="margin-top:48px;">
+        <div class="bottleneck-grid bottleneck-grid-5">
+          <div class="bottleneck-card">
+            <h4>ICP</h4>
+            <ul>
+              <li>Industry</li>
+              <li>Company size</li>
+              <li>Geography</li>
+              <li>Buying signals</li>
+            </ul>
+          </div>
+          <div class="bottleneck-card">
+            <h4>Scoring</h4>
+            <ul>
+              <li>Fit</li>
+              <li>Intent</li>
+              <li>Urgency</li>
+              <li>Qualification threshold</li>
+            </ul>
+          </div>
+          <div class="bottleneck-card">
+            <h4>Routing</h4>
+            <ul>
+              <li>Territory</li>
+              <li>Service</li>
+              <li>Priority</li>
+              <li>Sales owner</li>
+            </ul>
+          </div>
+          <div class="bottleneck-card">
+            <h4>Response</h4>
+            <ul>
+              <li>Email</li>
+              <li>CTA</li>
+              <li>Booking link</li>
+              <li>Nurture route</li>
+            </ul>
+          </div>
+          <div class="bottleneck-card">
+            <h4>SLA</h4>
+            <ul>
+              <li>Response target</li>
+              <li>Escalation rules</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="in-short-panel" style="max-width:680px;">
+        <div class="in-short-label">Example Configuration</div>
+        <h3 style="font-size:20px;margin-bottom:16px;">Business Logic,<br>Not Hardcoded Decisions<span class="text-orange">.</span></h3>
+        <dl>
+          <div class="in-short-row"><dt>ICP</dt><dd>UK B2B SaaS · 20–500 employees</dd></div>
+          <div class="in-short-row"><dt>Score Threshold</dt><dd>70+ → Sales-ready</dd></div>
+          <div class="in-short-row"><dt>Routing</dt><dd>High priority → Sales · Medium priority → Nurture · Low confidence → Human review</dd></div>
+          <div class="in-short-row"><dt>Response</dt><dd>Qualified → Meeting CTA · Nurture → Relevant follow-up</dd></div>
+          <div class="in-short-row"><dt>SLA</dt><dd>Priority lead → Immediate notification</dd></div>
+        </dl>
+        <p style="font-size:11px;color:var(--grey-label);margin-top:16px;">Illustrative configuration — adapted for each implementation. Not Braganda's universal ICP.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--grey-light);" aria-labelledby="workflow-heading">
     <div class="container">
       <div class="section-label">See the Workflow in Action</div>
       <h2 id="workflow-heading">One Enquiry. One<br>Automated Journey<span class="text-orange">.</span></h2>
@@ -98,12 +198,77 @@
         <div class="flow-step">Email Sent</div><div class="flow-arrow" aria-hidden="true">→</div>
         <div class="flow-step">Activity Logged</div>
       </div>
-      <div style="margin-top:24px;border:1px solid var(--grey-mid);background:var(--grey-light);height:280px;display:flex;align-items:center;justify-content:center;text-align:center;">
-        <div>
-          <div style="font-size:32px;margin-bottom:12px;">▶</div>
-          <p style="font-size:13px;color:var(--grey-text);">Workflow demo — video coming soon</p>
+      <div class="video-embed" id="workflow-demo-video" data-loom-url="" role="button" tabindex="0" aria-label="Play the 2-minute workflow walkthrough">
+        <div class="video-embed-poster">
+          <div class="video-embed-play" aria-hidden="true">▶</div>
+          <div class="video-embed-label">2-Minute Workflow Walkthrough</div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      var embed = document.getElementById('workflow-demo-video');
+      if (!embed) return;
+      function play() {
+        var url = embed.getAttribute('data-loom-url');
+        if (!url) return;
+        embed.innerHTML = '<iframe src="' + url + '" loading="lazy" allow="autoplay; fullscreen" allowfullscreen aria-label="Workflow walkthrough video"></iframe>';
+      }
+      embed.addEventListener('click', play);
+      embed.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); play(); } });
+    })();
+  </script>
+
+  <section aria-labelledby="performance-heading">
+    <div class="container">
+      <div class="section-label">System Performance</div>
+      <h2 id="performance-heading">Built for Speed.<br>Tested End-to-End<span class="text-orange">.</span></h2>
+      <div class="results-grid results-grid-4" style="margin-top:44px;">
+        <div class="result-card">
+          <div class="result-metric">6</div>
+          <h4>Automated Stages</h4>
+          <p>Capture → Qualify → Route → CRM → Respond → Track.</p>
+        </div>
+        <div class="result-card">
+          <div class="result-metric" style="font-size:28px;">End-to-End</div>
+          <h4>Lead Handling</h4>
+          <p>From form submission through qualification, routing, CRM update, response and logging without manual data entry.</p>
+        </div>
+        <div class="result-card">
+          <div class="result-metric">3</div>
+          <h4>Routing Paths</h4>
+          <p>Sales-ready → Sales. Nurture → Follow-up. Low confidence → Human review.</p>
+        </div>
+        <div class="result-card">
+          <div class="result-metric">100<span>%</span></div>
+          <h4>Workflow Logging</h4>
+          <p>Qualification, lead score, route and workflow outcome are recorded for operational visibility.</p>
+        </div>
+      </div>
+      <p style="font-size:12px;color:var(--grey-label);margin-top:24px;letter-spacing:0.02em;">Braganda demo environment · System capability data · Not client performance results</p>
+
+      <div class="benchmark-row">
+        <div class="section-label" style="margin-bottom:20px;">Controlled Test Benchmark</div>
+        <div class="benchmark-grid" id="benchmark-grid"></div>
+      </div>
+      <script>
+        (function () {
+          // Update these once controlled end-to-end testing has been completed.
+          var BENCHMARKS = {
+            'Median Processing Time': 'Benchmark pending',
+            'Routing Accuracy': 'Benchmark pending',
+            'CRM Write Success': 'Benchmark pending',
+            'End-to-End Test Success': 'Benchmark pending'
+          };
+          var grid = document.getElementById('benchmark-grid');
+          if (!grid) return;
+          grid.innerHTML = Object.keys(BENCHMARKS).map(function (label) {
+            return '<div class="benchmark-item"><div class="benchmark-label">' + label + '</div><div class="benchmark-value">' + BENCHMARKS[label] + '</div></div>';
+          }).join('');
+        })();
+      </script>
     </div>
   </section>
 
@@ -211,11 +376,16 @@
     </div>
   </section>
 
-  <div class="bespoke">
+  <div class="aios-callout">
     <div class="container">
-      <div class="bespoke-inner">
-        <div><h2>Want to see what this could look like in your GTM stack?</h2></div>
-        <a class="btn-white" href="/solutions/speed-to-lead/">See How It Works →</a>
+      <div class="aios-callout-inner">
+        <div class="section-label orange">Adapt The System</div>
+        <h2>Want this adapted<br>to your GTM stack<span class="text-orange">?</span></h2>
+        <p>Speed-to-Lead can be configured around your existing lead sources, CRM, qualification criteria, routing logic and sales process.</p>
+        <div class="aios-callout-btns">
+          <a class="btn btn-orange" href="/contact/">Discuss Your Project →</a>
+          <a class="btn btn-outline-white" href="#workflow-demo-video">Watch the Demo →</a>
+        </div>
       </div>
     </div>
   </div>
