@@ -446,7 +446,7 @@
       '<div class="qz-complete-icon">✓</div>' +
       '<h1>Thanks — we’ve got what we need.</h1>' +
       '<p class="qz-lead">We’ll use your answers to prepare for your session so we can focus on the areas with the strongest potential impact.</p>' +
-      '<a class="btn btn-orange" href="' + BOOKING_URL + '" target="_blank" rel="noopener">Book Your GTM Systems Session →</a>' +
+      '<a class="btn btn-orange" href="' + BOOKING_URL + '" target="_blank" rel="noopener">Book Your AI Systems Session →</a>' +
       '<div class="qz-reassure">' +
       '<div class="qz-reassure-item"><strong>Received</strong>Your assessment has been received.</div>' +
       '<div class="qz-reassure-item"><strong>Reviewed</strong>We’ll review your current systems and priorities.</div>' +
