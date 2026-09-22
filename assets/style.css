@@ -537,14 +537,15 @@ footer { background: var(--grey-light); color: var(--black); padding: 72px 0 40p
 }
 .tech-badge:hover, .tech-badge:focus-within { border-color: var(--orange); transform: translateY(-2px); }
 .tech-badge .tech-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--orange); flex-shrink: 0; }
-.tech-badge .tech-tip {
+.tech-badge .tech-tip, .stack-strip-item .tech-tip {
   position: absolute; bottom: calc(100% + 10px); left: 50%; transform: translateX(-50%) translateY(4px);
   width: 220px; background: var(--black); color: var(--white); font-size: 12px; font-weight: 400;
   line-height: 1.5; padding: 12px 14px; opacity: 0; visibility: hidden; pointer-events: none;
-  transition: opacity 0.15s, transform 0.15s; z-index: 20; text-align: left;
+  transition: opacity 0.15s, transform 0.15s; z-index: 20; text-align: left; white-space: normal;
 }
-.tech-badge .tech-tip::after { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border: 5px solid transparent; border-top-color: var(--black); }
-.tech-badge:hover .tech-tip, .tech-badge:focus-within .tech-tip { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+.tech-badge .tech-tip::after, .stack-strip-item .tech-tip::after { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border: 5px solid transparent; border-top-color: var(--black); }
+.tech-badge:hover .tech-tip, .tech-badge:focus-within .tech-tip,
+.stack-strip-item:hover .tech-tip, .stack-strip-item:focus-within .tech-tip { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
 .tech-disclaimer { font-size: 11px; color: var(--grey-label); margin-top: 8px; max-width: 640px; line-height: 1.6; }
 
 /* ─── DIFFERENTIATOR / PLATFORM AGNOSTIC ─────── */
@@ -632,11 +633,14 @@ footer { background: var(--grey-light); color: var(--black); padding: 72px 0 40p
 
 /* ─── CASE STUDY: TECH STACK STRIP (compact, horizontal) ─── */
 .stack-strip { display: flex; flex-wrap: wrap; border: 1px solid var(--grey-mid); background: var(--white); }
-.stack-strip-item { display: flex; align-items: center; gap: 10px; padding: 18px 24px; border-right: 1px solid var(--grey-mid); border-bottom: 1px solid var(--grey-mid); flex: 1 1 auto; white-space: nowrap; }
+.stack-strip-item { position: relative; display: flex; align-items: center; gap: 10px; padding: 14px 20px; border-right: 1px solid var(--grey-mid); border-bottom: 1px solid var(--grey-mid); flex: 1 1 auto; white-space: nowrap; cursor: default; transition: background 0.15s; }
 .stack-strip-item:last-child { border-right: none; }
-.stack-strip-logo { height: 18px; width: 18px; object-fit: contain; flex-shrink: 0; }
-.stack-strip-icon { font-size: 13px; width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--grey-text); }
-.stack-strip-item span { font-size: 12px; font-weight: 600; color: var(--black); }
+.stack-strip-item:hover, .stack-strip-item:focus-within { background: var(--grey-light); outline: none; }
+.stack-strip-logo { height: 24px; width: 24px; object-fit: contain; flex-shrink: 0; transition: transform 0.15s; }
+.stack-strip-item:hover .stack-strip-logo, .stack-strip-item:focus-within .stack-strip-logo { transform: scale(1.12); }
+.stack-strip-icon { font-size: 15px; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--grey-text); transition: transform 0.15s; }
+.stack-strip-item:hover .stack-strip-icon, .stack-strip-item:focus-within .stack-strip-icon { transform: scale(1.12); }
+.stack-strip-item span:not(.tech-tip) { font-size: 12px; font-weight: 600; color: var(--black); }
 
 /* ─── RESPONSIVE ──────────────────────────────── */
 .process-grid-5 { grid-template-columns: repeat(5, 1fr); }
