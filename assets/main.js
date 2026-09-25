@@ -215,7 +215,7 @@
       </div>
 
       <div class="footer-bottom">
-        <span>© 2025 Braganda Systems Ltd. All rights reserved.</span>
+        <span>© 2025 Braganda Systems Ltd. All rights reserved. · Designed by <a href="https://www.braganda.co.uk/" target="_blank" rel="noopener">Braganda Agency</a></span>
         <a href="mailto:hello@braganda.co.uk">hello@braganda.co.uk</a>
       </div>
     </div>
